@@ -63,8 +63,8 @@ const PHOTOS = [
 
 const QUESTIONS = [
   { key:'o', title:'Qual é a ocasião?', opts:[
-    ['casamento','Casamento','Cerimônia e festa'],
-    ['corporativo','Ensaio corporativo','Equipe, marca, retratos'],
+    ['pré-wedding','Pré-Wedding','Livre'],
+    ['corporativo','Ensaio corporativo','Marca, retratos'],
     ['familia','Família','Crianças, casal, gerações'] ] },
   { key:'s', title:'Qual estilo você prefere?', opts:[
     ['editorial','Editorial','Poses, luz dramática'],
@@ -72,8 +72,7 @@ const QUESTIONS = [
     ['classico','Clássico','Atemporal e limpo'] ] },
   { key:'e', title:'Onde imagina as fotos?', opts:[
     ['externo','Ao ar livre','Luz natural'],
-    ['interno','Em ambiente real','Casa, evento, escritório'],
-    ['estudio','Estúdio','Controle total da luz'] ] },
+    ['interno','Em ambiente real','Casa, evento, escritório'] ] },
   { key:'p', title:'O que mais importa na entrega?', opts:[
     ['qtd','Quantidade','Cobrir tudo'],
     ['arte','Poucas e artísticas','Cada foto é uma obra'],
