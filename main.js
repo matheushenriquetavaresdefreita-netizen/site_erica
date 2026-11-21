@@ -15,9 +15,9 @@ const CONFIG = {
   whatsapp: '554192662030', // DDI + DDD + número, só dígitos
   studio: 'Érica Escurceles – Momentos Reais',
   // Vídeos de fundo (caminho do arquivo .mp4/.webm, ou null para desativar)
-  heroVideo: sb('IMG_3718-converted.mp4'),      // ex.: 'media/hero.mp4'
+  heroVideo: sb('video_1_corrigido.mp4'),      // ex.: 'media/hero.mp4'
   sessionsVideo: null,  // ex.: 'media/natal.mp4'
-  heroVideoMobile: sb('video_1_corrigido.mp4'),   // vídeo VERTICAL (9:16) para celular, ex.: sb('hero-vertical.mp4')
+  heroVideoMobile: sb('hero-vertical.mp4'),   // vídeo VERTICAL (9:16) para celular, ex.: sb('hero-vertical.mp4')
   heroVideoPos: '50% 50%', // parte do vídeo que fica visível: '0% 50%' esquerda, '100% 50%' direita
   currency: 'BRL',
 
@@ -40,34 +40,25 @@ const CONFIG = {
   // Data limite da campanha (ISO). Se já passou, usa hoje + 14 dias.
   campaignEnd: '2026-12-10T23:59:00-03:00',
   slots: [
-    { day: 'Sáb 05/12', times: ['09:00','09:30','10:00','10:30','11:00'], taken: ['09:30','10:30'] },
-    { day: 'Dom 06/12', times: ['09:00','09:30','10:00','10:30','11:00'], taken: ['09:00'] },
+    { day: 'Sáb 05/12', times: ['08:00','09:30','10:00','14:30','17:00'], taken: ['13:30','17:30'] },
+    { day: 'Dom 06/12', times: ['09:00','09:30','10:00','10:30','11:00'], taken: ['08:00'] },
     { day: 'Sáb 12/12', times: ['09:00','09:30','10:00','10:30','11:00'], taken: [] }
   ],
   testimonials: [
-    { q: 'Em 20 minutos saíram as fotos mais bonitas que já tivemos da família inteira.', a: 'Camila & família' },
-    { q: 'Processo leve, sem estresse, e as crianças amaram o cenário de Natal.', a: 'Rafael M.' },
-    { q: 'Reservei pelo WhatsApp em um minuto e recebi tudo antes do Natal.', a: 'Juliana P.' }
+    { q: 'Em 20 minutos saíram as fotos mais bonitas que já tivemos da família.', a: 'Camila' },
+    { q: 'Processo leve, sem estresse.', a: 'Rafael M.' }
   ]
 };
 
 /* Fotos do portfólio. Troque `src` por suas imagens reais (veja README).
    Enquanto `src` for null, o site gera um placeholder com gradiente. */
 const PHOTOS = [
-  { t:'Casal Na Praia',   o:'pré-wedding',   s:'classico',   e:'externo', h:24,  r:1.25, src: sb('COLE-AQUI-O-NOME-COMPLETO-DA-FOTO.jpg') },
-  { t:'Primeira dança',        o:'casamento',   s:'espontaneo', e:'interno', h:340, r:0.8,  src:null },
-  { t:'Noiva em preto e branco',o:'casamento',  s:'editorial',  e:'estudio', h:210, r:1.4,  src:null },
-  { t:'Votos à beira-mar',     o:'casamento',   s:'espontaneo', e:'externo', h:195, r:1.0,  src:null },
-  { t:'Retrato de liderança',  o:'corporativo', s:'editorial',  e:'estudio', h:220, r:1.3,  src:null },
-  { t:'Equipe em movimento',   o:'corporativo', s:'espontaneo', e:'interno', h:160, r:0.85, src:null },
-  { t:'Headshot clássico',     o:'corporativo', s:'classico',   e:'estudio', h:30,  r:1.2,  src:null },
-  { t:'Escritório ao vivo',    o:'corporativo', s:'espontaneo', e:'interno', h:260, r:1.0,  src:null },
-  { t:'Domingo no parque',     o:'familia',     s:'espontaneo', e:'externo', h:110, r:0.9,  src:null },
-  { t:'Retrato em três gerações',o:'familia',   s:'classico',   e:'interno', h:15,  r:1.3,  src:null },
-  { t:'Capa de revista em casa',o:'familia',    s:'editorial',  e:'interno', h:300, r:1.1,  src:null },
-  { t:'Golden hour em família',o:'familia',     s:'editorial',  e:'externo', h:35,  r:1.35, src:null },
-  { t:'Cerimônia no jardim',   o:'casamento',   s:'classico',   e:'externo', h:90,  r:0.85, src:null },
-  { t:'Brinde dos padrinhos',  o:'casamento',   s:'espontaneo', e:'interno', h:5,   r:1.0,  src:null }
+  { t:'Casal Na Praia',   o:'pré-wedding',   s:'classico',   e:'externo', h:24,  r:1.25, src: sb('ffd42ca465681f8605357068_IMG_3699.jpeg') },
+  { t:'Ao Ar Livre',        o:'pré-wedding',   s:'espontaneo', e:'externo', h:24, r:1.25,  src: sb('677133969a78a99192ccc853_IMG_3655.jpeg') },
+  { t:'Headshot clássico',  o:'familia', s:'editorial',  e:'externo', h:24, r:1.25,  src: sb('IMG_9605.JPG.jpeg') },
+  { t:'Pegadas à beira-mar',   o:'corporativo', s:'editorial', e:'externo', h:24, r:1.25, src: sb('IMG_9608.JPG.jpeg') },
+  { t:'Encantador',o:'casamento',   s:'classico',   e:'externo', h:24,  r:1.25,  src: sb('IMG_3195.JPG.jpeg') },
+  { t:'B&W',o:'pré-wedding',    s:'editorial',  e:'externo', h:24, r:1.25,  src: sb('3b533a70a07db5b34e8fde3e_IMG_3624.jpeg') },
 ];
 
 const QUESTIONS = [
@@ -90,9 +81,9 @@ const QUESTIONS = [
 ];
 
 const SPOTS = [
-  { n:1, x:22, y:30, name:'Parque da Lagoa',     gh:'18h10 – 18h50', outfit:'Tons terrosos, linho, vestidos fluidos', best:'Casamento, família', h:110, note:'Luz lateral suave e reflexo na água.' },
-  { n:2, x:58, y:22, name:'Mirante do Morro',    gh:'17h50 – 18h30', outfit:'Cores sólidas, evitar estampas miúdas', best:'Casal, ensaio externo', h:25,  note:'Vista aberta, ótimo para contraluz.' },
-  { n:3, x:75, y:58, name:'Antiga Estação',      gh:'16h40 – 17h20', outfit:'Preto, branco e jeans', best:'Editorial, corporativo', h:210, note:'Textura de tijolo e trilhos.' },
+  { n:1, x:22, y:30, name:'Piçarras',     gh:'18h10 – 18h50', outfit:'Tons terrosos, linho, vestidos fluidos', best:'Casamento, família', h:110, note:'Luz lateral suave e reflexo na água.' },
+  { n:2, x:58, y:22, name:'São Francisco do Sul',    gh:'17h50 – 18h30', outfit:'Cores sólidas, evitar estampas miúdas', best:'Casal, ensaio externo', h:25,  note:'Vista aberta, ótimo para contraluz.' },
+  { n:3, x:75, y:58, name:'Guaratuba',      gh:'16h40 – 17h20', outfit:'Preto, branco e jeans', best:'Editorial, corporativo', h:210, note:'Textura de tijolo e trilhos.' },
   { n:4, x:38, y:68, name:'Jardim Botânico',     gh:'8h30 – 9h30',   outfit:'Tons claros e pastéis', best:'Família, casamento', h:130, note:'Manhã filtrada pelas folhas.' },
   { n:5, x:14, y:78, name:'Praça Central',       gh:'17h30 – 18h10', outfit:'Cores vivas contrastando com o verde', best:'Espontâneo, família', h:340, note:'Movimento de gente e bancos antigos.' }
 ];
