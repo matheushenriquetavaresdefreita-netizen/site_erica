@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Érica Escurceles  — Momentos Reais</title>
+<meta name="description" content="Portfólio interativo, calculadora de pacotes, mapa de locais e sessões especiais de fotografia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a href="#topo" class="logo">Érica Escurceles<span>.</span></a>
+  <nav aria-label="Principal">
+    <a href="#consultoria">Galeria</a>
+    <a href="#pacotes">Pacotes</a>
+    <a href="#mapa">Locais</a>
+    <a href="#sessoes" class="pill">Sessões especiais</a>
+  </nav>
+</header>
+
+<main id="topo">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" data-parallax="0.25"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Fotografia de pré-wedding, famílias &amp; momentos reais</p>
+      <h1 class="hero-title">
+        <span class="line"><span>Luz, tempo</span></span>
+        <span class="line"><span>e <em>memória</em>.</span></span>
+      </h1>
+      <p class="hero-sub">Em vez de uma grade de fotos, uma conversa. Responda 4 perguntas e veja só o que combina com você.</p>
+      <a href="#consultoria" class="btn">Começar a consultoria</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- NÚMEROS -->
+  <section class="stats">
+    <div class="stat"><b data-count="3">0</b><span>ensaios entregues</span></div>
+    <div class="stat"><b data-count="1">0</b><span>anos de estrada</span></div>
+    <div class="stat"><b data-count="100" data-suffix="%">0</b><span>clientes que indicam</span></div>
+  </section>
+
+  <!-- 1. CONSULTORIA GUIADA -->
+  <section class="section" id="consultoria">
+    <div class="wrap">
+      <p class="eyebrow reveal">01 — Consultoria guiada</p>
+      <h2 class="reveal">Conte o que você procura.<br>A galeria se ajusta.</h2>
+
+      <div class="quiz reveal" id="quiz" aria-live="polite">
+        <div class="quiz-bar"><i id="quizBar"></i></div>
+        <div class="quiz-body" id="quizBody"></div>
+        <div class="quiz-actions">
+          <button class="link" id="quizBack" type="button" hidden>← Voltar</button>
+          <button class="link" id="quizReset" type="button" hidden>Refazer</button>
+        </div>
+      </div>
+
+      <div class="result-head" id="resultHead" hidden>
+        <h3 id="resultTitle"></h3>
+        <p id="resultText"></p>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- 2. CALCULADORA -->
+  <section class="section dark" id="pacotes">
+    <div class="wrap calc-grid">
+      <div>
+        <p class="eyebrow reveal">02 — Pacotes sob medida</p>
+        <h2 class="reveal">Monte o seu pacote.<br>Veja o valor na hora.</h2>
+        <p class="lead reveal">Estimativa em tempo real. O resumo vai direto para o WhatsApp do fotógrafo, sem formulário.</p>
+
+        <div class="opts reveal" id="packs" role="radiogroup" aria-label="Pacotes"></div>
+        <p class="lead reveal" style="margin:14px 0 22px;font-size:.88rem">Todos incluem galeria online para visualização e seleção.</p>
+        <div class="field reveal">
+          <label for="km">Distância até o local (km, só ida): <input type="number" id="km" min="0" step="1" value="0" style="width:90px;padding:6px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:transparent;color:inherit"></label>
+          <label class="opt" style="margin-top:10px"><input type="checkbox" id="roundTrip" checked><span>Contar ida e volta<small>Cobrança por km rodado, com franquia inicial grátis</small></span></label>
+        </div>
+
+        <div class="opts reveal" id="opts"></div>
+      </div>
+
+      <aside class="summary reveal" aria-live="polite">
+        <h3>Seu resumo</h3>
+        <ul id="summaryList"></ul>
+        <div class="total"><span>Estimativa</span><b id="total">R$ 0</b></div>
+        <small>Valor estimado, sujeito a confirmação de data e deslocamento.</small>
+        <a class="btn full" id="waQuote" href="#" target="_blank" rel="noopener">Enviar para o WhatsApp</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 3. MAPA -->
+  <section class="section" id="mapa">
+    <div class="wrap">
+      <p class="eyebrow reveal">03 — Mapa de inspiração</p>
+      <h2 class="reveal">Lugares já testados,<br>com a luz certa.</h2>
+      <div class="map-grid">
+        <div class="map reveal" id="map" role="group" aria-label="Mapa de locais para ensaios"></div>
+        <article class="spot reveal" id="spot" aria-live="polite"></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SESSÕES ESPECIAIS -->
+  <section class="section accent" id="sessoes">
+    <div class="wrap">
+      <p class="eyebrow reveal">04 — Sessões especiais</p>
+      <h2 class="reveal">Mini sessões de Natal.<br>Poucas vagas.</h2>
+      <p class="lead reveal">30 minutos, ao ar livre, 10 fotos editadas. Reserve seu horário antes que acabe.</p>
+
+      <div class="countdown reveal" id="countdown" aria-label="Tempo restante para reservar">
+        <div><b id="cd-d">00</b><span>dias</span></div>
+        <div><b id="cd-h">00</b><span>horas</span></div>
+        <div><b id="cd-m">00</b><span>min</span></div>
+        <div><b id="cd-s">00</b><span>seg</span></div>
+      </div>
+
+      <div class="slots reveal" id="slots" role="listbox" aria-label="Horários disponíveis"></div>
+      <a class="btn full-sm reveal" id="waSlot" href="#" target="_blank" rel="noopener">Reservar horário escolhido</a>
+
+      <div class="testi reveal" id="testi" aria-live="polite">
+        <blockquote id="testiQuote"></blockquote>
+        <cite id="testiAuthor"></cite>
+        <div class="dots" id="testiDots"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Érica Escurceles · Momentos Reais</p>
+  <a id="waFooter" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
