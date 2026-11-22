@@ -58,6 +58,9 @@ const PHOTOS = [
   { t:'Headshot clássico',  o:'familia', s:'editorial',  e:'externo', h:24, r:1.25,  src: sb('IMG_9605.JPG.jpeg') },
   { t:'Pegadas à beira-mar',   o:'corporativo', s:'editorial', e:'externo', h:24, r:1.25, src: sb('IMG_9608.JPG.jpeg') },
   { t:'Encantador',o:'casamento',   s:'classico',   e:'externo', h:24,  r:1.25,  src: sb('IMG_3195.JPG.jpeg') },
+  { t:'Kids',o:'familia',   s:'espontaneo',   e:'externo', h:24,  r:1.25,  src: sb('IMG_3960.JPG.jpeg') },
+  { t:'Kids',o:'familia',   s:'espontaneo',   e:'externo', h:24,  r:1.25,  src: sb('IMG_3964.JPG.jpeg') },
+  { t:'B&W',o:'familia',   s:'editorial',   e:'externo', h:24,  r:1.25,  src: sb('IMG_3965.JPG.jpeg') },
   { t:'B&W',o:'pré-wedding',    s:'editorial',  e:'externo', h:24, r:1.25,  src: sb('3b533a70a07db5b34e8fde3e_IMG_3624.jpeg') },
 ];
 
